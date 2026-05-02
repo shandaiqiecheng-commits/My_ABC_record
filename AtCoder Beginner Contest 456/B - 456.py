@@ -1,0 +1,20 @@
+lst1 = list(map(int, input().split()))
+lst2 = list(map(int, input().split()))
+lst3 = list(map(int, input().split()))
+p1_4 = lst1.count(4) / 6
+p1_5 = lst1.count(5) / 6
+p1_6 = lst1.count(6) / 6
+p2_4 = lst2.count(4) / 6
+p2_5 = lst2.count(5) / 6
+p2_6 = lst2.count(6) / 6
+p3_4 = lst3.count(4) / 6
+p3_5 = lst3.count(5) / 6
+p3_6 = lst3.count(6) / 6
+p456 = p1_4 * p2_5 * p3_6
+p465 = p1_4 * p2_6 * p3_5
+p546 = p1_5 * p2_4 * p3_6
+p564 = p1_5 * p2_6 * p3_4
+p654 = p1_6 * p2_5 * p3_4
+p645 = p1_6 * p2_4 * p3_5
+p = p456 + p465 + p546 + p564 + p654 + p645
+print(f"{p:.10f}")
